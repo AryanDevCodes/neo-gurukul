@@ -1,10 +1,9 @@
-
 import React, { useState } from 'react';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
-import { Users, Calendar, MessageSquare, Star, MapPin, Clock, Camera, Music } from 'lucide-react';
+import { Users, Calendar, MessageSquare, Star, MapPin, Clock, Camera, Music, Award } from 'lucide-react';
 
 const CommunityHub = () => {
   const [selectedEvent, setSelectedEvent] = useState('guru-purnima');
