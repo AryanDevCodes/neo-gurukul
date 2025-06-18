@@ -12,6 +12,8 @@ import StudentDashboard from "./pages/StudentDashboard";
 import KnowledgeBase from "./pages/KnowledgeBase";
 import TeacherDashboard from "./pages/TeacherDashboard";
 import ParentDashboard from "./pages/ParentDashboard";
+import TeacherSpecializations from "./pages/TeacherSpecializations";
+import SanskritTeachers from "./pages/SanskritTeachers";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -31,6 +33,14 @@ const App = () => (
           <Route path="/teacher-dashboard" element={<TeacherDashboard />} />
           <Route path="/parent-dashboard" element={<ParentDashboard />} />
           <Route path="/knowledge-base" element={<KnowledgeBase />} />
+          <Route path="/teacher-specializations" element={<TeacherSpecializations />} />
+          <Route path="/teachers/sanskrit" element={<SanskritTeachers />} />
+          {/* Placeholder routes for other teacher specializations */}
+          <Route path="/teachers/philosophy" element={<div className="p-8 text-center">Philosophy Teachers - Coming Soon</div>} />
+          <Route path="/teachers/scriptures" element={<div className="p-8 text-center">Scripture Teachers - Coming Soon</div>} />
+          <Route path="/teachers/yoga" element={<div className="p-8 text-center">Yoga Teachers - Coming Soon</div>} />
+          <Route path="/teachers/ayurveda" element={<div className="p-8 text-center">Ayurveda Teachers - Coming Soon</div>} />
+          <Route path="/teachers/arts" element={<div className="p-8 text-center">Arts Teachers - Coming Soon</div>} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>

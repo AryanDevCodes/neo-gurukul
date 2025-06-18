@@ -1,8 +1,10 @@
+
 import React, { useState } from 'react';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
-import { Users, BookOpen, Calendar, MessageSquare, Award, TrendingUp } from 'lucide-react';
+import { Users, BookOpen, Calendar, MessageSquare, Award, TrendingUp, UserCheck } from 'lucide-react';
+import { Link } from 'react-router-dom';
 import CourseManagement from '../components/teacher/CourseManagement';
 import StudentProgress from '../components/teacher/StudentProgress';
 import TeachingResources from '../components/teacher/TeachingResources';
@@ -45,12 +47,22 @@ const TeacherDashboard = () => {
       <div className="max-w-7xl mx-auto">
         {/* Header */}
         <div className="mb-8">
-          <h1 className="text-4xl font-bold bg-gradient-to-r from-orange-600 to-green-600 bg-clip-text text-transparent mb-4">
-            Acharya Portal 🎓
-          </h1>
-          <p className="text-gray-600 text-lg">
-            Guide your students on their journey of wisdom and knowledge
-          </p>
+          <div className="flex items-center justify-between">
+            <div>
+              <h1 className="text-4xl font-bold bg-gradient-to-r from-orange-600 to-green-600 bg-clip-text text-transparent mb-4">
+                Acharya Portal 🎓
+              </h1>
+              <p className="text-gray-600 text-lg">
+                Guide your students on their journey of wisdom and knowledge
+              </p>
+            </div>
+            <Button asChild variant="outline" className="border-orange-300 hover:bg-orange-50">
+              <Link to="/teacher-specializations">
+                <UserCheck size={16} className="mr-2" />
+                View All Teachers
+              </Link>
+            </Button>
+          </div>
         </div>
 
         {/* Navigation Tabs */}
