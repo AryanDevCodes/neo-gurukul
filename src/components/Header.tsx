@@ -25,6 +25,9 @@ const Header = () => {
           </Link>
 
           <nav className="hidden md:flex items-center gap-6">
+            <Link to="/student-dashboard" className="text-gray-700 hover:text-orange-600 transition-colors">
+              Student Portal
+            </Link>
             <Link to="/about" className="text-gray-700 hover:text-orange-600 transition-colors">
               About
             </Link>
