@@ -2,6 +2,7 @@
 import React from 'react';
 import { Button } from '@/components/ui/button';
 import { ArrowDown } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 const Hero = () => {
   const scrollToFeatures = () => {
@@ -41,13 +42,15 @@ const Hero = () => {
           <Button 
             size="lg" 
             className="bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 text-white px-8 py-4 text-lg font-semibold shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105"
+            asChild
           >
-            Begin Your Journey
+            <Link to="/register">Begin Your Journey</Link>
           </Button>
           <Button 
             variant="outline" 
             size="lg"
             className="border-2 border-orange-500 text-orange-600 hover:bg-orange-50 px-8 py-4 text-lg font-semibold transition-all duration-300"
+            onClick={scrollToFeatures}
           >
             Learn More
           </Button>
