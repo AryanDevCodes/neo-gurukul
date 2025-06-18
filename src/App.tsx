@@ -14,6 +14,9 @@ import TeacherDashboard from "./pages/TeacherDashboard";
 import ParentDashboard from "./pages/ParentDashboard";
 import TeacherSpecializations from "./pages/TeacherSpecializations";
 import SanskritTeachers from "./pages/SanskritTeachers";
+import VeerataVidya from "./pages/VeerataVidya";
+import AssessmentSystem from "./pages/AssessmentSystem";
+import CommunityHub from "./pages/CommunityHub";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -35,6 +38,9 @@ const App = () => (
           <Route path="/knowledge-base" element={<KnowledgeBase />} />
           <Route path="/teacher-specializations" element={<TeacherSpecializations />} />
           <Route path="/teachers/sanskrit" element={<SanskritTeachers />} />
+          <Route path="/veerata-vidya" element={<VeerataVidya />} />
+          <Route path="/assessment-system" element={<AssessmentSystem />} />
+          <Route path="/community-hub" element={<CommunityHub />} />
           {/* Placeholder routes for other teacher specializations */}
           <Route path="/teachers/philosophy" element={<div className="p-8 text-center">Philosophy Teachers - Coming Soon</div>} />
           <Route path="/teachers/scriptures" element={<div className="p-8 text-center">Scripture Teachers - Coming Soon</div>} />

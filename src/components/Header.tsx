@@ -28,30 +28,39 @@ const Header = () => {
 
           {/* Main Navigation */}
           <nav className="hidden md:flex items-center">
-            <div className="flex items-center gap-6 px-6">
-              <Link to="/student-dashboard" className="text-gray-700 hover:text-orange-600 transition-colors font-medium">
+            <div className="flex items-center gap-4 px-6">
+              <Link to="/student-dashboard" className="text-gray-700 hover:text-orange-600 transition-colors font-medium text-sm">
                 Student Portal
               </Link>
-              <Link to="/teacher-dashboard" className="text-gray-700 hover:text-orange-600 transition-colors font-medium">
-                Teacher Portal
+              <Link to="/teacher-dashboard" className="text-gray-700 hover:text-orange-600 transition-colors font-medium text-sm">
+                Teachers
               </Link>
-              <Link to="/parent-dashboard" className="text-gray-700 hover:text-orange-600 transition-colors font-medium">
-                Parent Portal
+              <Link to="/parent-dashboard" className="text-gray-700 hover:text-orange-600 transition-colors font-medium text-sm">
+                Parents
               </Link>
-              <Link to="/knowledge-base" className="text-gray-700 hover:text-orange-600 transition-colors font-medium">
-                Knowledge Base
+              <Link to="/knowledge-base" className="text-gray-700 hover:text-orange-600 transition-colors font-medium text-sm">
+                Knowledge
+              </Link>
+              <Link to="/veerata-vidya" className="text-gray-700 hover:text-orange-600 transition-colors font-medium text-sm">
+                🛡️ Veerata Vidya
+              </Link>
+              <Link to="/assessment-system" className="text-gray-700 hover:text-orange-600 transition-colors font-medium text-sm">
+                Assessment
+              </Link>
+              <Link to="/community-hub" className="text-gray-700 hover:text-orange-600 transition-colors font-medium text-sm">
+                Community
               </Link>
             </div>
             
-            {/* Separator */}
-            <Separator orientation="vertical" className="h-8 mx-4 bg-gray-300" />
+            {/* Separator with better spacing */}
+            <Separator orientation="vertical" className="h-8 mx-6 bg-gray-300" />
             
-            {/* Auth Buttons */}
-            <div className="flex items-center gap-3 pl-2">
-              <Button variant="outline" asChild className="border-orange-300 hover:bg-orange-50">
+            {/* Auth Buttons with improved spacing */}
+            <div className="flex items-center gap-3">
+              <Button variant="outline" asChild className="border-orange-300 hover:bg-orange-50 text-sm">
                 <Link to="/login">Login</Link>
               </Button>
-              <Button asChild className="bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700">
+              <Button asChild className="bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 text-sm">
                 <Link to="/register">Get Started</Link>
               </Button>
             </div>
