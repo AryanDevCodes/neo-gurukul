@@ -28,11 +28,11 @@ const Header = () => {
             <Link to="/student-dashboard" className="text-gray-700 hover:text-orange-600 transition-colors">
               Student Portal
             </Link>
-            <Link to="/about" className="text-gray-700 hover:text-orange-600 transition-colors">
-              About
+            <Link to="/teacher-dashboard" className="text-gray-700 hover:text-orange-600 transition-colors">
+              Teacher Portal
             </Link>
-            <Link to="/courses" className="text-gray-700 hover:text-orange-600 transition-colors">
-              Courses
+            <Link to="/parent-dashboard" className="text-gray-700 hover:text-orange-600 transition-colors">
+              Parent Portal
             </Link>
             <Link to="/knowledge-base" className="text-gray-700 hover:text-orange-600 transition-colors">
               Knowledge Base
