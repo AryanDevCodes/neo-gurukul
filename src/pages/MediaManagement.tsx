@@ -2,8 +2,9 @@ import React, { useState } from 'react';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import MediaUploader from '@/components/media/MediaUploader';
+import SupabaseMediaUploader from '@/components/media/SupabaseMediaUploader';
 import DeploymentGuide from '@/components/deployment/DeploymentGuide';
-import { Upload, Settings, FileText } from 'lucide-react';
+import { Upload, Settings, FileText, Database } from 'lucide-react';
 
 const MediaManagement = () => {
   return (
@@ -19,11 +20,15 @@ const MediaManagement = () => {
           </p>
         </div>
 
-        <Tabs defaultValue="upload" className="space-y-6">
-          <TabsList className="grid w-full grid-cols-3">
+        <Tabs defaultValue="supabase-upload" className="space-y-6">
+          <TabsList className="grid w-full grid-cols-4">
+            <TabsTrigger value="supabase-upload" className="flex items-center gap-2">
+              <Database size={16} />
+              Supabase Upload
+            </TabsTrigger>
             <TabsTrigger value="upload" className="flex items-center gap-2">
               <Upload size={16} />
-              Media Upload
+              Demo Upload
             </TabsTrigger>
             <TabsTrigger value="deployment" className="flex items-center gap-2">
               <Settings size={16} />
@@ -35,12 +40,25 @@ const MediaManagement = () => {
             </TabsTrigger>
           </TabsList>
 
+          <TabsContent value="supabase-upload">
+            <Card>
+              <CardHeader>
+                <CardTitle>Supabase Media Upload & Management</CardTitle>
+                <CardDescription>
+                  Production-ready media upload system with Supabase Storage and database integration
+                </CardDescription>
+              </CardHeader>
+              <CardContent>
+                <SupabaseMediaUploader />
+              </CardContent>
+            </Card>
+          </TabsContent>
           <TabsContent value="upload">
             <Card>
               <CardHeader>
-                <CardTitle>Media Upload & Management</CardTitle>
+                <CardTitle>Demo Media Upload & Management</CardTitle>
                 <CardDescription>
-                  Upload and manage videos, images, documents, and other learning materials
+                  Demo version - upload and manage videos, images, documents, and other learning materials
                 </CardDescription>
               </CardHeader>
               <CardContent>
