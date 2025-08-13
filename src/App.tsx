@@ -21,6 +21,7 @@ import AssessmentSystem from "./pages/AssessmentSystem";
 import CommunityHub from "./pages/CommunityHub";
 import Courses from "./pages/Courses";
 import LearningAnalytics from "./pages/LearningAnalytics";
+import MediaManagement from "./pages/MediaManagement";
 import NotFound from "./pages/NotFound";
 import Unauthorized from "./pages/Unauthorized";
 import ProtectedRoute from "./components/ProtectedRoute";
@@ -69,6 +70,7 @@ const App = () => (
               <LearningAnalytics />
             </ProtectedRoute>
           } />
+          <Route path="/media-management" element={<MediaManagement />} />
           {/* Placeholder routes for other teacher specializations */}
           <Route path="/teachers/philosophy" element={<div className="p-8 text-center">Philosophy Teachers - Coming Soon</div>} />
           <Route path="/teachers/scriptures" element={<div className="p-8 text-center">Scripture Teachers - Coming Soon</div>} />
