@@ -38,7 +38,7 @@ export const uploadMediaFile = async (
       file_type: getFileType(file.type),
       file_size: file.size,
       uploaded_by: userId,
-      course_id: courseId || null,
+      course_id: courseId,
       category: category,
       tags: extractTagsFromFilename(file.name)
     };
