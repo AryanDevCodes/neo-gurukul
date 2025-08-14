@@ -1,13 +1,4 @@
-import { createClient } from '@supabase/supabase-js';
-
-const supabaseUrl = import.meta.env.VITE_SUPABASE_URL;
-const supabaseAnonKey = import.meta.env.VITE_SUPABASE_ANON_KEY;
-
-if (!supabaseUrl || !supabaseAnonKey) {
-  throw new Error('Missing Supabase environment variables');
-}
-
-export const supabase = createClient(supabaseUrl, supabaseAnonKey);
+import { supabase } from '@/integrations/supabase/client';
 
 // Media file upload function
 export const uploadMediaFile = async (
@@ -47,7 +38,7 @@ export const uploadMediaFile = async (
       file_type: getFileType(file.type),
       file_size: file.size,
       uploaded_by: userId,
-      course_id: courseId,
+      course_id: courseId || null,
       category: category,
       tags: extractTagsFromFilename(file.name)
     };

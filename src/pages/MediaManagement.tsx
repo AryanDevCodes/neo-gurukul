@@ -4,9 +4,25 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import MediaUploader from '@/components/media/MediaUploader';
 import SupabaseMediaUploader from '@/components/media/SupabaseMediaUploader';
 import DeploymentGuide from '@/components/deployment/DeploymentGuide';
+import { SimpleAuth } from '@/components/auth/SimpleAuth';
+import { useAuth } from '@/components/auth/AuthProvider';
 import { Upload, Settings, FileText, Database } from 'lucide-react';
 
 const MediaManagement = () => {
+  const { user, loading } = useAuth();
+
+  if (loading) {
+    return (
+      <div className="min-h-screen flex items-center justify-center">
+        <div className="text-lg">Loading...</div>
+      </div>
+    );
+  }
+
+  if (!user) {
+    return <SimpleAuth />;
+  }
+
   return (
     <div className="min-h-screen bg-gradient-to-br from-orange-50 via-white to-green-50 p-4">
       <div className="max-w-7xl mx-auto">
