@@ -2,12 +2,12 @@
 const API_BASE_URL = 'http://localhost:8080/api';
 
 export interface User {
-  id: number;
+  id: string;
   email: string;
   firstName: string;
   lastName: string;
   fullName: string;
-  role: 'STUDENT' | 'TEACHER' | 'PARENT' | 'ADMIN';
+  role: 'student' | 'teacher' | 'parent' | 'admin';
   gradeLevel?: string;
   specialization?: string;
   bio?: string;
@@ -24,6 +24,13 @@ export interface Course {
   level: 'beginner' | 'intermediate' | 'advanced';
   image_url?: string;
   enrollments_count: number;
+}
+
+export interface Enrollment {
+  id: string;
+  course_id: string;
+  progress: number;
+  course: Course;
 }
 
 // API functions will be implemented to connect to Java backend
