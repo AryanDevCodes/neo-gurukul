@@ -4,7 +4,7 @@ import { Button } from '@/components/ui/button'
 import { Badge } from '@/components/ui/badge'
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar'
 import { Clock, Users, Star, BookOpen } from 'lucide-react'
-import { Course } from '@/lib/supabase'
+import { Course } from '@/lib/api'
 import { motion } from 'framer-motion'
 
 interface CourseCardProps {
