@@ -1,8 +1,6 @@
 import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
-import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
-import { ReactQueryDevtools } from "@tanstack/react-query-devtools";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { Toaster as HotToaster } from 'react-hot-toast';
 import { AuthProvider } from "./contexts/AuthContext";
@@ -27,11 +25,10 @@ import Unauthorized from "./pages/Unauthorized";
 import ProtectedRoute from "./components/ProtectedRoute";
 import { ThemeProvider } from "./components/ui/ThemeProvider";
 
-const queryClient = new QueryClient();
+
 
 const App = () => (
-  <QueryClientProvider client={queryClient}>
-    <AuthProvider>
+  <AuthProvider>
       <ThemeProvider attribute="class" defaultTheme="light" enableSystem>
         <TooltipProvider>
           <Toaster />
@@ -81,12 +78,10 @@ const App = () => (
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
-        <ReactQueryDevtools initialIsOpen={false} />
       </BrowserRouter>
         </TooltipProvider>
       </ThemeProvider>
     </AuthProvider>
-  </QueryClientProvider>
 );
 
 export default App;
