@@ -4,8 +4,8 @@ import { TooltipProvider } from "@/components/ui/tooltip";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { Toaster as HotToaster } from 'react-hot-toast';
 import { AuthProvider } from "./contexts/AuthContext";
-import ResponsiveHeader from "./components/ResponsiveHeader";
-import Index from "./pages/Index";
+import FuturisticHeader from "./components/FuturisticHeader";
+import FuturisticIndex from "./pages/FuturisticIndex";
 import Login from "./pages/Login";
 import Register from "./pages/Register";
 import StudentDashboard from "./pages/StudentDashboard";
@@ -35,9 +35,9 @@ const App = () => (
           <Sonner />
           <HotToaster position="top-right" />
           <BrowserRouter>
-          <ResponsiveHeader />
+          <FuturisticHeader />
           <Routes>
-          <Route path="/" element={<Index />} />
+          <Route path="/" element={<FuturisticIndex />} />
           <Route path="/login" element={<Login />} />
           <Route path="/register" element={<Register />} />
           <Route path="/student-dashboard" element={
