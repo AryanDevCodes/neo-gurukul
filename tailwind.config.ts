@@ -18,11 +18,6 @@ export default {
 			}
 		},
 		extend: {
-			fontFamily: {
-				'inter': ['Inter', 'sans-serif'],
-				'mono': ['JetBrains Mono', 'monospace'],
-				'orbitron': ['Orbitron', 'sans-serif'],
-			},
 			colors: {
 				border: 'hsl(var(--border))',
 				input: 'hsl(var(--input))',
@@ -66,15 +61,6 @@ export default {
 					'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
-				},
-				// Cyberpunk Colors
-				cyber: {
-					purple: 'hsl(var(--dharma-cyber-purple))',
-					cyan: 'hsl(var(--dharma-cyber-cyan))',
-					green: 'hsl(var(--dharma-cyber-green))',
-					orange: 'hsl(var(--dharma-cyber-orange))',
-					gold: 'hsl(var(--dharma-cyber-gold))',
-					pink: 'hsl(var(--dharma-cyber-pink))',
 				}
 			},
 			borderRadius: {
@@ -84,89 +70,25 @@ export default {
 			},
 			keyframes: {
 				'accordion-down': {
-					from: { height: '0' },
-					to: { height: 'var(--radix-accordion-content-height)' }
+					from: {
+						height: '0'
+					},
+					to: {
+						height: 'var(--radix-accordion-content-height)'
+					}
 				},
 				'accordion-up': {
-					from: { height: 'var(--radix-accordion-content-height)' },
-					to: { height: '0' }
-				},
-				'fade-in': {
-					'0%': { opacity: '0', transform: 'translateY(20px)' },
-					'100%': { opacity: '1', transform: 'translateY(0)' }
-				},
-				'fade-out': {
-					'0%': { opacity: '1', transform: 'translateY(0)' },
-					'100%': { opacity: '0', transform: 'translateY(20px)' }
-				},
-				'scale-in': {
-					'0%': { transform: 'scale(0.9)', opacity: '0' },
-					'100%': { transform: 'scale(1)', opacity: '1' }
-				},
-				'slide-up': {
-					'0%': { transform: 'translateY(100%)' },
-					'100%': { transform: 'translateY(0)' }
-				},
-				'slide-down': {
-					'0%': { transform: 'translateY(-100%)' },
-					'100%': { transform: 'translateY(0)' }
-				},
-				'slide-left': {
-					'0%': { transform: 'translateX(100%)' },
-					'100%': { transform: 'translateX(0)' }
-				},
-				'slide-right': {
-					'0%': { transform: 'translateX(-100%)' },
-					'100%': { transform: 'translateX(0)' }
-				},
-				'glow': {
-					'0%, 100%': { boxShadow: '0 0 20px hsl(var(--primary) / 0.5)' },
-					'50%': { boxShadow: '0 0 40px hsl(var(--primary) / 0.8)' }
-				},
-				'matrix-rain': {
-					'0%': { transform: 'translateY(-100%)' },
-					'100%': { transform: 'translateY(100vh)' }
-				},
-				'neural-pulse': {
-					'0%, 100%': { transform: 'scale(1)', opacity: '0.8' },
-					'50%': { transform: 'scale(1.1)', opacity: '1' }
-				},
-				'cyber-flicker': {
-					'0%, 100%': { opacity: '1' },
-					'50%': { opacity: '0.8' },
-					'51%': { opacity: '1' },
-					'52%': { opacity: '0.9' },
-					'53%': { opacity: '1' }
+					from: {
+						height: 'var(--radix-accordion-content-height)'
+					},
+					to: {
+						height: '0'
+					}
 				}
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
-				'accordion-up': 'accordion-up 0.2s ease-out',
-				'fade-in': 'fade-in 0.5s ease-out',
-				'fade-out': 'fade-out 0.5s ease-out',
-				'scale-in': 'scale-in 0.3s ease-out',
-				'slide-up': 'slide-up 0.4s ease-out',
-				'slide-down': 'slide-down 0.4s ease-out',
-				'slide-left': 'slide-left 0.4s ease-out',
-				'slide-right': 'slide-right 0.4s ease-out',
-				'glow': 'glow 2s ease-in-out infinite',
-				'matrix-rain': 'matrix-rain 3s linear infinite',
-				'neural-pulse': 'neural-pulse 2s ease-in-out infinite',
-				'cyber-flicker': 'cyber-flicker 0.15s infinite'
-			},
-			backgroundImage: {
-				'gradient-cyber': 'var(--gradient-cyber)',
-				'gradient-dharma': 'var(--gradient-dharma)',
-				'gradient-matrix': 'var(--gradient-matrix)',
-				'gradient-hologram': 'var(--gradient-hologram)',
-				'gradient-neural': 'var(--gradient-neural)',
-			},
-			boxShadow: {
-				'cyber': 'var(--shadow-cyber)',
-				'neon': 'var(--shadow-neon)',
-				'dharma': 'var(--shadow-dharma)',
-				'hologram': 'var(--shadow-hologram)',
-				'deep': 'var(--shadow-deep)',
+				'accordion-up': 'accordion-up 0.2s ease-out'
 			}
 		}
 	},
