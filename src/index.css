@@ -1,59 +1,84 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Noto+Sans+Devanagari:wght@400;500;600;700&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. */
+/* Educational Platform Design System */
 
 @layer base {
   :root {
-    --background: 30 100% 99%;
-    --foreground: 24 10% 10%;
+    /* Core Colors */
+    --background: 210 100% 99%;
+    --foreground: 210 12% 8%;
 
     --card: 0 0% 100%;
-    --card-foreground: 24 10% 10%;
+    --card-foreground: 210 12% 8%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 24 10% 10%;
+    --popover-foreground: 210 12% 8%;
 
-    --primary: 24 94% 50%;
-    --primary-foreground: 0 0% 98%;
+    --primary: 210 98% 45%;
+    --primary-foreground: 0 0% 100%;
 
-    --secondary: 120 40% 55%;
-    --secondary-foreground: 0 0% 98%;
+    --secondary: 142 76% 36%;
+    --secondary-foreground: 0 0% 100%;
 
-    --muted: 30 40% 96%;
-    --muted-foreground: 25 5% 45%;
+    --muted: 210 40% 98%;
+    --muted-foreground: 210 6% 50%;
 
-    --accent: 30 94% 85%;
-    --accent-foreground: 24 10% 10%;
+    --accent: 38 92% 50%;
+    --accent-foreground: 0 0% 100%;
 
     --destructive: 0 84% 60%;
     --destructive-foreground: 0 0% 98%;
 
-    --border: 30 20% 88%;
-    --input: 30 20% 88%;
-    --ring: 24 94% 50%;
+    --border: 210 30% 92%;
+    --input: 210 30% 92%;
+    --ring: 210 98% 45%;
 
     --radius: 0.75rem;
 
-    /* Dharma-specific colors */
-    --dharma-orange: 24 94% 50%;
-    --dharma-orange-light: 30 94% 85%;
-    --dharma-orange-dark: 24 100% 45%;
-    --dharma-green: 120 40% 55%;
-    --dharma-green-light: 120 40% 85%;
-    --dharma-green-dark: 120 60% 40%;
-    --dharma-saffron: 39 100% 50%;
-    --dharma-gold: 45 100% 51%;
+    /* Educational Platform Colors */
+    --edu-primary: 210 98% 45%;
+    --edu-primary-light: 210 98% 85%;
+    --edu-primary-dark: 210 100% 35%;
+    --edu-success: 142 76% 36%;
+    --edu-success-light: 142 76% 85%;
+    --edu-warning: 38 92% 50%;
+    --edu-warning-light: 38 92% 85%;
+    --edu-info: 196 93% 56%;
+    --edu-info-light: 196 93% 85%;
+    --edu-knowledge: 263 85% 55%;
+    --edu-knowledge-light: 263 85% 85%;
 
-    /* Gradients */
-    --gradient-primary: linear-gradient(135deg, hsl(var(--dharma-orange)), hsl(var(--dharma-green)));
-    --gradient-secondary: linear-gradient(135deg, hsl(var(--dharma-saffron)), hsl(var(--dharma-gold)));
-    --gradient-subtle: linear-gradient(180deg, hsl(var(--background)), hsl(var(--muted)));
+    /* Interactive Colors */
+    --interactive-hover: 210 98% 92%;
+    --interactive-active: 210 98% 40%;
+    --quiz-correct: 142 76% 36%;
+    --quiz-incorrect: 0 84% 60%;
+    --quiz-pending: 38 92% 50%;
 
-    /* Shadows */
-    --shadow-dharma: 0 10px 30px -10px hsl(var(--dharma-orange) / 0.3);
-    --shadow-soft: 0 4px 20px -4px hsl(var(--foreground) / 0.1);
+    /* Learning Progress Colors */
+    --progress-beginner: 142 76% 36%;
+    --progress-intermediate: 38 92% 50%;
+    --progress-advanced: 0 84% 60%;
+    --progress-expert: 263 85% 55%;
+
+    /* Modern Gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(var(--edu-primary)), hsl(var(--edu-success)));
+    --gradient-secondary: linear-gradient(135deg, hsl(var(--edu-warning)), hsl(var(--accent)));
+    --gradient-knowledge: linear-gradient(135deg, hsl(var(--edu-knowledge)), hsl(var(--edu-info)));
+    --gradient-surface: linear-gradient(180deg, hsl(var(--background)), hsl(var(--muted)));
+    --gradient-card: linear-gradient(145deg, hsl(var(--card)), hsl(var(--muted)));
+
+    /* Advanced Shadows */
+    --shadow-sm: 0 1px 2px 0 hsl(var(--foreground) / 0.05);
+    --shadow-md: 0 4px 6px -1px hsl(var(--foreground) / 0.1), 0 2px 4px -1px hsl(var(--foreground) / 0.06);
+    --shadow-lg: 0 10px 15px -3px hsl(var(--foreground) / 0.1), 0 4px 6px -2px hsl(var(--foreground) / 0.05);
+    --shadow-xl: 0 20px 25px -5px hsl(var(--foreground) / 0.1), 0 10px 10px -5px hsl(var(--foreground) / 0.04);
+    --shadow-glow: 0 0 20px hsl(var(--edu-primary) / 0.3);
+    --shadow-knowledge: 0 8px 32px hsl(var(--edu-knowledge) / 0.25);
 
     --sidebar-background: 0 0% 98%;
 
@@ -73,50 +98,66 @@
   }
 
   .dark {
-    --background: 24 20% 8%;
-    --foreground: 30 40% 95%;
+    /* Dark Theme Colors */
+    --background: 210 15% 6%;
+    --foreground: 210 12% 95%;
 
-    --card: 24 20% 10%;
-    --card-foreground: 30 40% 95%;
+    --card: 210 15% 8%;
+    --card-foreground: 210 12% 95%;
 
-    --popover: 24 20% 10%;
-    --popover-foreground: 30 40% 95%;
+    --popover: 210 15% 8%;
+    --popover-foreground: 210 12% 95%;
 
-    --primary: 24 94% 60%;
-    --primary-foreground: 24 20% 8%;
+    --primary: 210 98% 55%;
+    --primary-foreground: 210 15% 6%;
 
-    --secondary: 120 30% 25%;
-    --secondary-foreground: 30 40% 95%;
+    --secondary: 142 76% 45%;
+    --secondary-foreground: 210 15% 6%;
 
-    --muted: 24 20% 15%;
-    --muted-foreground: 30 20% 65%;
+    --muted: 210 15% 12%;
+    --muted-foreground: 210 6% 65%;
 
-    --accent: 24 20% 15%;
-    --accent-foreground: 30 40% 95%;
+    --accent: 38 92% 60%;
+    --accent-foreground: 210 15% 6%;
 
-    --destructive: 0 62% 50%;
-    --destructive-foreground: 30 40% 95%;
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 210 12% 95%;
 
-    --border: 24 20% 20%;
-    --input: 24 20% 20%;
-    --ring: 24 94% 60%;
+    --border: 210 15% 18%;
+    --input: 210 15% 18%;
+    --ring: 210 98% 55%;
 
-    /* Dark mode dharma colors */
-    --dharma-orange: 24 94% 60%;
-    --dharma-orange-light: 30 60% 30%;
-    --dharma-orange-dark: 24 100% 55%;
-    --dharma-green: 120 30% 45%;
-    --dharma-green-light: 120 30% 25%;
-    --dharma-green-dark: 120 50% 35%;
+    /* Dark Educational Colors */
+    --edu-primary: 210 98% 55%;
+    --edu-primary-light: 210 98% 25%;
+    --edu-primary-dark: 210 100% 45%;
+    --edu-success: 142 76% 45%;
+    --edu-success-light: 142 76% 25%;
+    --edu-warning: 38 92% 60%;
+    --edu-warning-light: 38 92% 25%;
+    --edu-info: 196 93% 65%;
+    --edu-info-light: 196 93% 25%;
+    --edu-knowledge: 263 85% 65%;
+    --edu-knowledge-light: 263 85% 25%;
 
-    /* Dark mode gradients */
-    --gradient-primary: linear-gradient(135deg, hsl(var(--dharma-orange)), hsl(var(--dharma-green)));
-    --gradient-secondary: linear-gradient(135deg, hsl(var(--dharma-saffron)), hsl(var(--dharma-gold)));
-    --gradient-subtle: linear-gradient(180deg, hsl(var(--background)), hsl(var(--muted)));
+    /* Dark Interactive Colors */
+    --interactive-hover: 210 15% 15%;
+    --interactive-active: 210 98% 50%;
 
-    /* Dark mode shadows */
-    --shadow-dharma: 0 10px 30px -10px hsl(var(--dharma-orange) / 0.5);
-    --shadow-soft: 0 4px 20px -4px hsl(var(--foreground) / 0.2);
+    /* Dark Gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(var(--edu-primary)), hsl(var(--edu-success)));
+    --gradient-secondary: linear-gradient(135deg, hsl(var(--edu-warning)), hsl(var(--accent)));
+    --gradient-knowledge: linear-gradient(135deg, hsl(var(--edu-knowledge)), hsl(var(--edu-info)));
+    --gradient-surface: linear-gradient(180deg, hsl(var(--background)), hsl(var(--muted)));
+    --gradient-card: linear-gradient(145deg, hsl(var(--card)), hsl(var(--muted)));
+
+    /* Dark Shadows */
+    --shadow-sm: 0 1px 2px 0 hsl(var(--foreground) / 0.15);
+    --shadow-md: 0 4px 6px -1px hsl(var(--foreground) / 0.25), 0 2px 4px -1px hsl(var(--foreground) / 0.15);
+    --shadow-lg: 0 10px 15px -3px hsl(var(--foreground) / 0.25), 0 4px 6px -2px hsl(var(--foreground) / 0.15);
+    --shadow-xl: 0 20px 25px -5px hsl(var(--foreground) / 0.25), 0 10px 10px -5px hsl(var(--foreground) / 0.15);
+    --shadow-glow: 0 0 20px hsl(var(--edu-primary) / 0.4);
+    --shadow-knowledge: 0 8px 32px hsl(var(--edu-knowledge) / 0.35);
     --sidebar-background: 240 5.9% 10%;
     --sidebar-foreground: 240 4.8% 95.9%;
     --sidebar-primary: 224.3 76.3% 48%;
@@ -134,6 +175,197 @@
   }
 
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-foreground font-inter;
+    font-feature-settings: 'cv02', 'cv03', 'cv04', 'cv11';
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-inter font-semibold;
+  }
+
+  .font-mono {
+    @apply font-jetbrains;
+  }
+
+  .font-devanagari {
+    @apply font-noto-devanagari;
+  }
+}
+
+@layer components {
+  /* Educational Platform Components */
+  .edu-card {
+    @apply bg-card rounded-lg shadow-md border border-border backdrop-blur-sm;
+  }
+
+  .edu-card-hover {
+    @apply edu-card transition-all duration-300 hover:shadow-lg hover:scale-[1.02] hover:-translate-y-1;
+  }
+
+  .edu-gradient-text {
+    @apply bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent;
+  }
+
+  .edu-gradient-bg {
+    background: var(--gradient-primary);
+  }
+
+  .edu-knowledge-gradient {
+    background: var(--gradient-knowledge);
+  }
+
+  .edu-surface-gradient {
+    background: var(--gradient-surface);
+  }
+
+  .edu-button-primary {
+    @apply bg-primary text-primary-foreground hover:bg-primary/90 rounded-lg px-6 py-3 font-medium transition-all duration-200 shadow-md hover:shadow-lg;
+  }
+
+  .edu-button-secondary {
+    @apply bg-secondary text-secondary-foreground hover:bg-secondary/90 rounded-lg px-6 py-3 font-medium transition-all duration-200 shadow-md hover:shadow-lg;
+  }
+
+  .edu-input {
+    @apply bg-background border border-input rounded-lg px-4 py-3 text-foreground placeholder:text-muted-foreground focus:border-primary focus:ring-2 focus:ring-primary/20 transition-all duration-200;
+  }
+
+  .edu-progress-bar {
+    @apply bg-muted rounded-full overflow-hidden;
+  }
+
+  .edu-progress-fill {
+    @apply h-full bg-gradient-to-r from-primary to-secondary transition-all duration-500 ease-out;
+  }
+
+  .quiz-correct {
+    @apply bg-green-50 border-green-200 text-green-800 dark:bg-green-900/20 dark:border-green-800 dark:text-green-300;
+  }
+
+  .quiz-incorrect {
+    @apply bg-red-50 border-red-200 text-red-800 dark:bg-red-900/20 dark:border-red-800 dark:text-red-300;
+  }
+
+  .quiz-pending {
+    @apply bg-yellow-50 border-yellow-200 text-yellow-800 dark:bg-yellow-900/20 dark:border-yellow-800 dark:text-yellow-300;
+  }
+
+  /* Learning Level Indicators */
+  .level-beginner {
+    @apply bg-green-500 text-white;
+  }
+
+  .level-intermediate {
+    @apply bg-yellow-500 text-white;
+  }
+
+  .level-advanced {
+    @apply bg-orange-500 text-white;
+  }
+
+  .level-expert {
+    @apply bg-purple-500 text-white;
+  }
+
+  /* Animation Classes */
+  .animate-fade-in {
+    animation: fadeIn 0.6s ease-out forwards;
+  }
+
+  .animate-slide-up {
+    animation: slideUp 0.6s ease-out forwards;
+  }
+
+  .animate-scale-in {
+    animation: scaleIn 0.4s ease-out forwards;
+  }
+
+  .animate-glow {
+    animation: glow 2s ease-in-out infinite alternate;
+  }
+
+  /* Glassmorphism Effect */
+  .glass {
+    @apply backdrop-blur-md bg-white/10 border border-white/20;
+  }
+
+  .glass-dark {
+    @apply backdrop-blur-md bg-black/10 border border-white/10;
+  }
+}
+
+@layer utilities {
+  /* Custom Utilities */
+  .text-shadow {
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+
+  .text-shadow-lg {
+    text-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+
+  .border-gradient {
+    border-image: var(--gradient-primary) 1;
+  }
+
+  .scrollbar-thin {
+    scrollbar-width: thin;
+    scrollbar-color: hsl(var(--muted-foreground)) transparent;
+  }
+
+  .scrollbar-thin::-webkit-scrollbar {
+    width: 6px;
+  }
+
+  .scrollbar-thin::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  .scrollbar-thin::-webkit-scrollbar-thumb {
+    background-color: hsl(var(--muted-foreground));
+    border-radius: 3px;
+  }
+}
+
+/* Animation Keyframes */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes scaleIn {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes glow {
+  from {
+    box-shadow: 0 0 20px hsl(var(--primary) / 0.3);
+  }
+  to {
+    box-shadow: 0 0 30px hsl(var(--primary) / 0.6);
   }
 }

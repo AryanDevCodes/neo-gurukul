@@ -20,6 +20,7 @@ import CommunityHub from "./pages/CommunityHub";
 import Courses from "./pages/Courses";
 import LearningAnalytics from "./pages/LearningAnalytics";
 import MediaManagement from "./pages/MediaManagement";
+import AdvancedTools from "./pages/AdvancedTools";
 import NotFound from "./pages/NotFound";
 import Unauthorized from "./pages/Unauthorized";
 import ProtectedRoute from "./components/ProtectedRoute";
@@ -68,6 +69,7 @@ const App = () => (
             </ProtectedRoute>
           } />
           <Route path="/media-management" element={<MediaManagement />} />
+          <Route path="/advanced-tools" element={<AdvancedTools />} />
           {/* Placeholder routes for other teacher specializations */}
           <Route path="/teachers/philosophy" element={<div className="p-8 text-center">Philosophy Teachers - Coming Soon</div>} />
           <Route path="/teachers/scriptures" element={<div className="p-8 text-center">Scripture Teachers - Coming Soon</div>} />
